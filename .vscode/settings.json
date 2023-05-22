@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "raylib-tmx.h": "c",
+        "raylib.h": "c",
+        "state.h": "c",
+        "game.h": "c",
+        "stdio.h": "c",
+        "asset.h": "c",
+        "menu.h": "c",
+        "string.h": "c",
+        "vector.h": "c",
+        "player.h": "c",
+        "cstdlib": "c",
+        "stdint.h": "c",
+        "stdlib.h": "c",
+        "animation.h": "c",
+        "tmx.h": "c",
+        "map": "c",
+        "system_error": "c"
+    }
+}
