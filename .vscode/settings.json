@@ -16,6 +16,8 @@
         "animation.h": "c",
         "tmx.h": "c",
         "map": "c",
-        "system_error": "c"
+        "system_error": "c",
+        "math.h": "c",
+        "ecs.h": "c"
     }
 }

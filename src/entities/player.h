@@ -5,8 +5,12 @@
 
 
 #pragma once
+
+#define PLAYER_SPEED 50
+
 #include "raylib/raylib.h"
 #include "../animation.h"
+#include "../physics/physics.h"
 #include "ecs.h"
 #include "../asset.h"
 #include "../state.h"
@@ -21,4 +25,4 @@ void player_update();
 
 void player_render();
 
-entity get_player();
+entity *get_player();

@@ -14,6 +14,7 @@
 #include "entities/ecs.h"
 #include "entities/player.h"
 #include "map.h"
+#include "physics/collision.h"
 
 void game_();
 void game_update();

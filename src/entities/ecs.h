@@ -24,17 +24,24 @@ typedef struct stats_c {
 
 } stats_c;
 
-typedef struct gravity_c {
-    
-} gravity_c;
-
 typedef struct ai_c {
 
 } ai_c;
 
 typedef struct collision_c {
-    Rectangle AABB; 
+    Rectangle hitbox;
+    Vector2 center;
+    Vector2 half_size;
 } collision_c;
+
+typedef struct physics_c {
+    Vector2 velocity;
+    Vector2 friction;
+    Vector2 max_velocity;
+    Vector2 acceleration;
+    float mass;
+    bool can_jump;
+} physics_c;
 
 typedef struct animation_c {
     Texture2D tex;
@@ -44,14 +51,15 @@ typedef struct animation_c {
     Rectangle *frames;
 } animation_c;
 
+
 typedef struct components_t {
-    position_c *position_compenent;
+    position_c *position_component;
     health_c   *health_component;
     stats_c    *stats_component;
-    gravity_c  *gravity_component;
     ai_c       *ai_component;
     collision_c *collision_component;
     size_c       *size_component;
+    physics_c    *physics_component;
     animation_c  *animation_component;
 } components_t;
 
@@ -63,17 +71,14 @@ typedef struct entity {
 } entity;
 
 /////       POSITION STUFF      /////
-
 void add_position_component(entity *en, int x, int y);
-
 /////       HEALTH STUFF        /////
-
 void add_health_component(entity *en, float max_health);
-
 /////       SIZE STUFF          /////
-
 void add_size_component(entity *en, float width, float height);
 
-/////       ANIMATION STUFF     /////
+void add_collision_component(entity *en);
+
+void update_collision_component(entity *en);
 
 

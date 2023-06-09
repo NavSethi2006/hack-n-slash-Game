@@ -21,6 +21,14 @@ typedef enum state {
     STATE_PAUSE, 
 };
 
+typedef enum entity_state {
+    IDLE,
+    WALK,
+    RUN,
+    JUMP,
+    ATTACK,
+    FALLING
+};
 
 // returns the state of which the game is in at the moment
 enum state get_state();

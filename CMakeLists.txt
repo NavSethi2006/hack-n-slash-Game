@@ -7,15 +7,17 @@ enable_testing()
 
 file(GLOB TARGET_SRC "./src/*.c")
 file(GLOB ENTITY_SRC "./src/entities/*.c")
+file(GLOB PHYSICS_SRC "./src/physics/*.c")
 
 
-add_executable(main ${TARGET_SRC} ${ENTITY_SRC})
+add_executable(main ${TARGET_SRC} ${ENTITY_SRC} ${PHYSICS_SRC})
 target_include_directories(main PUBLIC ${CMAKE_SOURCE_DIR}/include/)  
 
 find_package(ZLIB)
 find_package(LibXml2 REQUIRED)
 
-target_link_libraries(main ${CMAKE_SOURCE_DIR}/lib/libraylib.so
+target_link_libraries(main -lm
+                            ${CMAKE_SOURCE_DIR}/lib/libraylib.so
                            ${CMAKE_SOURCE_DIR}/lib/libraylib-tmx.a
                            /usr/local/lib/libtmx.a)
 
