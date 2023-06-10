@@ -48,7 +48,7 @@ typedef struct animation_c {
     float switch_time;
     bool flag;
     int framecount;
-    Rectangle *frames;
+    Rectangle frames[];
 } animation_c;
 
 
