@@ -14,14 +14,14 @@ void state();
 void switch_state(int state);
 
 // the enum that holds all the possible game states
-typedef enum state { 
+enum state { 
     STATE_SPLASH, 
     STATE_MENU, 
     STATE_GAME, 
     STATE_PAUSE, 
 };
 
-typedef enum entity_state {
+enum entity_state {
     IDLE,
     WALK,
     RUN,

@@ -20,16 +20,17 @@ void add_size_component(entity *en, float width, float height)
     en->components.size_component->height = height;
 }
 
-void add_collision_component(entity *en) {
+void add_collision_component(entity *en)
+{
     en->components.collision_component = malloc(sizeof(collision_c));
 }
 
-void update_collision_component(entity *en) {
-    en->components.collision_component->hitbox = (Rectangle){en->components.position_component->x,
-                                                             en->components.position_component->y,
-                                                             en->components.size_component->width,
-                                                             en->components.size_component->height,};
-  en->components.collision_component->center = (Vector2) {(en->components.position_component->x + en->components.size_component->width) / 2,
-                                                          (en->components.position_component->y + en->components.size_component->height) / 2};
-  
+void update_collision_component(entity *en)
+{
+    en->components.collision_component->hitbox = (Rectangle){
+        en->components.position_component->x,
+        en->components.position_component->y,
+        en->components.size_component->width,
+        en->components.size_component->height,
+    };
 }

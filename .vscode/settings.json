@@ -18,6 +18,9 @@
         "map": "c",
         "system_error": "c",
         "math.h": "c",
-        "ecs.h": "c"
+        "ecs.h": "c",
+        "physics.h": "c",
+        "cstdint": "c",
+        "stdbool.h": "c"
     }
 }

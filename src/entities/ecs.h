@@ -30,8 +30,6 @@ typedef struct ai_c {
 
 typedef struct collision_c {
     Rectangle hitbox;
-    Vector2 center;
-    Vector2 half_size;
 } collision_c;
 
 typedef struct physics_c {
@@ -45,10 +43,7 @@ typedef struct physics_c {
 
 typedef struct animation_c {
     Texture2D tex;
-    float switch_time;
-    bool flag;
-    int framecount;
-    Rectangle frames[];
+    Rectangle *frames;
 } animation_c;
 
 
